@@ -47,5 +47,5 @@ EXPOSE 80
 # Script que se ejecuta al arrancar el contenedor
 CMD php artisan config:cache && \
     php artisan route:cache && \
-    php artisan migrate:fresh --force --seed && \
+    php artisan migrate --force && \
     apache2-foreground
